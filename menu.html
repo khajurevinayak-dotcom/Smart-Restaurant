@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Restaurant Menu</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f9f9f9; }
+    h1 { text-align: center; }
+    h2 { background: #eee; padding: 10px; }
+    .dish { border: 1px solid #ddd; padding: 10px; margin: 5px; background: #fff; }
+    .cart { position: fixed; bottom: 10px; right: 10px; background: #fff; padding: 10px; border: 1px solid #000; }
+    button { margin-left: 10px; padding: 5px 10px; }
+  </style>
+</head>
+<body>
+
+<h1>🍴 Smart Restaurant Menu</h1>
+
+<h2>Maharashtrian</h2>
+<div class="dish">Puran Poli - ₹60 <button onclick="addToCart('Puran Poli',60)">Add</button></div>
+<div class="dish">Misal Pav - ₹50 <button onclick="addToCart('Misal Pav',50)">Add</button></div>
+<div class="dish">Vada Pav - ₹30 <button onclick="addToCart('Vada Pav',30)">Add</button></div>
+<div class="dish">Poha - ₹40 <button onclick="addToCart('Poha',40)">Add</button></div>
+<div class="dish">Kothimbir Vadi - ₹50 <button onclick="addToCart('Kothimbir Vadi',50)">Add</button></div>
+<div class="dish">Thalipeeth - ₹60 <button onclick="addToCart('Thalipeeth',60)">Add</button></div>
+<div class="dish">Sabudana Khichdi - ₹55 <button onclick="addToCart('Sabudana Khichdi',55)">Add</button></div>
+<div class="dish">Solkadhi - ₹40 <button onclick="addToCart('Solkadhi',40)">Add</button></div>
+
+<h2>South Indian</h2>
+<div class="dish">Dosa - ₹70 <button onclick="addToCart('Dosa',70)">Add</button></div>
+<div class="dish">Idli Sambar - ₹50 <button onclick="addToCart('Idli Sambar',50)">Add</button></div>
+<div class="dish">Uttapam - ₹60 <button onclick="addToCart('Uttapam',60)">Add</button></div>
+<div class="dish">Medu Vada - ₹45 <button onclick="addToCart('Medu Vada',45)">Add</button></div>
+<div class="dish">Rasam Rice - ₹70 <button onclick="addToCart('Rasam Rice',70)">Add</button></div>
+<div class="dish">Pongal - ₹65 <button onclick="addToCart('Pongal',65)">Add</button></div>
+<div class="dish">Upma - ₹50 <button onclick="addToCart('Upma',50)">Add</button></div>
+<div class="dish">Filter Coffee - ₹30 <button onclick="addToCart('Filter Coffee',30)">Add</button></div>
+
+<h2>Desserts</h2>
+<div class="dish">Gulab Jamun - ₹40 <button onclick="addToCart('Gulab Jamun',40)">Add</button></div>
+<div class="dish">Rasgulla - ₹45 <button onclick="addToCart('Rasgulla',45)">Add</button></div>
+<div class="dish">Kheer - ₹50 <button onclick="addToCart('Kheer',50)">Add</button></div>
+<div class="dish">Jalebi - ₹40 <button onclick="addToCart('Jalebi',40)">Add</button></div>
+<div class="dish">Malpua - ₹55 <button onclick="addToCart('Malpua',55)">Add</button></div>
+<div class="dish">Basundi - ₹60 <button onclick="addToCart('Basundi',60)">Add</button></div>
+<div class="dish">Ladoo - ₹35 <button onclick="addToCart('Ladoo',35)">Add</button></div>
+<div class="dish">Rabdi - ₹65 <button onclick="addToCart('Rabdi',65)">Add</button></div>
+
+<h2>Rajasthani</h2>
+<div class="dish">Dal Baati Churma - ₹100 <button onclick="addToCart('Dal Baati Churma',100)">Add</button></div>
+<div class="dish">Gatte ki Sabzi - ₹80 <button onclick="addToCart('Gatte ki Sabzi',80)">Add</button></div>
+<div class="dish">Ker Sangri - ₹90 <button onclick="addToCart('Ker Sangri',90)">Add</button></div>
+<div class="dish">Laal Maas - ₹150 <button onclick="addToCart('Laal Maas',150)">Add</button></div>
+<div class="dish">Mohanthal - ₹60 <button onclick="addToCart('Mohanthal',60)">Add</button></div>
+<div class="dish">Besan Gatta Curry - ₹85 <button onclick="addToCart('Besan Gatta Curry',85)">Add</button></div>
+<div class="dish">Rajasthani Kadhi - ₹70 <button onclick="addToCart('Rajasthani Kadhi',70)">Add</button></div>
+<div class="dish">Churma Ladoo - ₹45 <button onclick="addToCart('Churma Ladoo',45)">Add</button></div>
+
+<h2>Bengali</h2>
+<div class="dish">Shorshe Ilish - ₹160 <button onclick="addToCart('Shorshe Ilish',160)">Add</button></div>
+<div class="dish">Chingri Malai Curry - ₹150 <button onclick="addToCart('Chingri Malai Curry',150)">Add</button></div>
+<div class="dish">Aloo Posto - ₹70 <button onclick="addToCart('Aloo Posto',70)">Add</button></div>
+<div class="dish">Luchi & Cholar Dal - ₹80 <button onclick="addToCart('Luchi & Cholar Dal',80)">Add</button></div>
+<div class="dish">Shukto - ₹85 <button onclick="addToCart('Shukto',85)">Add</button></div>
+<div class="dish">Macher Jhol - ₹120 <button onclick="addToCart('Macher Jhol',120)">Add</button></div>
+<div class="dish">Sandesh - ₹50 <button onclick="addToCart('Sandesh',50)">Add</button></div>
+<div class="dish">Mishti Doi - ₹45 <button onclick="addToCart('Mishti Doi',45)">Add</button></div>
+
+<h2>Gujarati</h2>
+<div class="dish">Dhokla - ₹40 <button onclick="addToCart('Dhokla',40)">Add</button></div>
+<div class="dish">Undhiyu - ₹90 <button onclick="addToCart('Undhiyu',90)">Add</button></div>
+<div class="dish">Khandvi - ₹45 <button onclick="addToCart('Khandvi',45)">Add</button></div>
+<div class="dish">Thepla - ₹50 <button onclick="addToCart('Thepla',50)">Add</button></div>
+<div class="dish">Handvo - ₹70 <button onclick="addToCart('Handvo',70)">Add</button></div>
+<div class="dish">Fafda Jalebi - ₹60 <button onclick="addToCart('Fafda Jalebi',60)">Add</button></div>
+<div class="dish">Sev Tameta Nu Shaak - ₹55 <button onclick="addToCart('Sev Tameta Nu Shaak',55)">Add</button></div>
+<div class="dish">Shrikhand - ₹50 <button onclick="addToCart('Shrikhand',50)">Add</button></div>
+
+<h2>Non-Vegetarian</h2>
+<div class="dish">Butter Chicken - ₹260 <button onclick="addToCart('Butter Chicken',160)">Add</button></div>
+<div class="dish">Chicken Biryani - ₹340 <button onclick="addToCart('Chicken Biryani',140)">Add</button></div>
+<div class="dish">Mutton Rogan Josh - ₹480 <button onclick="addToCart('Mutton Rogan Josh',180)">Add</button></div>
+<div class="dish">Fish Fry - ₹420 <button onclick="addToCart('Fish Fry',120)">Add</button></div>
+<div class="dish">Egg Curry - ₹150 <button onclick="addToCart('Egg Curry',90)">Add</button></div>
+<div class="dish">Chicken 65 - ₹130 <button onclick="addToCart('Chicken 65',130)">Add</button></div>
+<div class="dish">Prawn Masala - ₹150 <button onclick="addToCart('Prawn Masala',150)">Add</button></div>
+<div class="dish">Keema Pav - ₹110 <button onclick="addToCart('Keema Pav',110)">Add</button></div>
+
+<h2>Vegetarian</h2>
+<div class="dish">Paneer Butter Masala - ₹120 <button onclick="addToCart('Paneer Butter Masala',120)">Add</button></div>
+<div class="dish">Chole Bhature - ₹90 <button onclick="addToCart('Chole Bhature',90)">Add</button></div>
+<div class="dish">Rajma Chawal - ₹80 <button onclick="addToCart('Rajma Chawal',80)">Add</button></div>
+<div class="dish">Veg Biryani - ₹100 <button onclick="addToCart('Veg Biryani',100)">Add</button></div>
+<div class="dish">Palak Paneer - ₹110 <button onclick="addToCart('Palak Paneer',110)">Add</button></div>
+<div class="dish">Mixed Veg - ₹85 <button onclick="addToCart('Mixed Veg',85)">Add</button></div>
+<div class="dish">Baingan Bharta - ₹75 <button onclick="addToCart('Baingan Bharta',75)">Add</button></div>
+<div class="dish">Tandoori Roti - ₹20 <button onclick="addToCart('Tandoori Roti',20)">Add</button></div>
+
+<h2>Punjabi</h2>
+<div class="dish">Amritsari Kulcha - ₹80 <button onclick="addToCart('Amritsari Kulcha',80)">Add</button></div>
+<div class="dish">Sarson Da Saag - ₹90 <button onclick="addToCart('Sarson Da Saag',90)">Add</button></div>
+<div class="dish">Makki Di Roti - ₹40 <button onclick="addToCart('Makki Di Roti',40)">Add</button></div>
+<div class="dish">Lassi - ₹35 <button onclick="addToCart('Lassi',35)">Add</button></div>
+<div class="dish">Paneer Tikka - ₹110 <button onclick="addToCart('Paneer Tikka',110)">Add</button></div>
+<div class="dish">Aloo Paratha - ₹60 <button onclick="addToCart('Aloo Paratha',60)">Add</button></div>
+<div class="dish">Dal Makhani - ₹100 <button onclick="addToCart('Dal Makhani',100)">Add</button></div>
+<div class="dish">Butter Naan - ₹30 <button onclick="addToCart('Butter Naan',30)">Add</button></div>
+
+<div class="cart" id="cart">
+  🛒 Cart: <span id="cart-items">0</span> items | Total: ₹<span id="cart-total">0</span><br>
+  <button onclick="placeOrder()">✅ Place Order</button>
+</div>
+
+<script>
+  let cartCount = 0;
+  let cartTotal = 0;
+  let orderList = [];
+
+  function addToCart(item, price) {
+    cartCount++;
+    cartTotal += price;
+    orderList.push({name: item, price: price});
+    document.getElementById("cart-items").innerText = cartCount;
+    document.getElementById("cart-total").innerText = cartTotal;
+  }
+
+  function placeOrder() {
+    let tableNo = prompt("Enter Table Number:");
+    if (tableNo) {
+      alert("✅ Order Placed!\n\nTable: " + tableNo + "\nItems:\n" + orderList.map(i=>i.name+" - ₹"+i.price).join("\n") + "\n\nTotal: ₹" + cartTotal);
+    }
+  }
+</script>
+
+</body>
+</html>
